@@ -196,7 +196,6 @@ class BidxTwilioSMS {
 	 */
 	public function send($number, $message, $extra = array()) {
 		
-		$time = new DateTime('@' . time());
 		
 		$values = array(
 			'sms_direction' => self::get_numeric_direction(self::DIRECTION_OUTBOUND),
