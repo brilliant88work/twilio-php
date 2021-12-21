@@ -196,7 +196,7 @@ class BidxTwilioSMS {
 		$values = array(
 			'sms_direction' => self::get_numeric_direction(self::DIRECTION_OUTBOUND),
 			'sms_number'    => $number,
-			'sms_timestamp' => $time->getTimestamp(),
+			'sms_timestamp' => time(),
 			'sms_message'   => $message,
 			'sms_status'    => self::STATUS_PENDING,
 		);
