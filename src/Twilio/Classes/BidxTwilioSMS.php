@@ -1,11 +1,9 @@
 <?php
 /**
  * SMS class
- *
- * Uses RingCentral API to send and recieve replies to, SMS communications
+ * Uses Twillo API to send and receive replies to, SMS communications
  *
  * @package BIDXCMS
- * @author     Shekhar Juneja
  * @copyright  Broker IDX Sites Inc. 2009-2021
  * @version    1
  */
@@ -195,8 +193,6 @@ class BidxTwilioSMS {
 	 * @return  void
 	 */
 	public function send($number, $message, $extra = array()) {
-		
-		
 		$values = array(
 			'sms_direction' => self::get_numeric_direction(self::DIRECTION_OUTBOUND),
 			'sms_number'    => $number,
